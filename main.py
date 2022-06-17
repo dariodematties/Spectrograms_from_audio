@@ -10,7 +10,7 @@ def main():
     parser.add_argument('--results', default='raven', help='Output format of analysis results. Values in [\'audacity\', \'raven\']. Defaults to \'raven\'.')
     parser.add_argument('--window', type=float, default=3.0, help='Window duration in seconds of extracted spectrograms.')
     parser.add_argument('--overlap', type=float, default=0.0, help='Overlap in seconds between extracted spectrograms.')
-    parser.add_argument('--noise_red', default=True, type=bool,help='Whether or not to apply noise reduction. Defaults to \'False\'.')
+    parser.add_argument('--noise_red', action='store_true', help='Whether or not to apply noise reduction. Defaults to \'False\'.')
     args = parser.parse_args()
 
     get_spectrograms_from_directory(args.window, args.overlap, args.i, args.o, args.filetype, args.noise_red)

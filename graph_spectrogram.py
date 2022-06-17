@@ -30,7 +30,7 @@ def graph_mel_spectrogram_as_mono_channel(y, sr, n_mels, file_path):
 
 
 
-def get_spectrograms_from_file(input_path, output_path, window, overlap, noise_red=True):
+def get_spectrograms_from_file(input_path, output_path, window, overlap, noise_red):
     start_time=0.0
     filename=os.path.splitext(input_path)[0]
     assert overlap < window

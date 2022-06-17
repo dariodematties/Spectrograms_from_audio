@@ -2,7 +2,7 @@
 FROM python:latest
 
 # Install required packages
-RUN apt-get update && apt-get install -y --no-install-recommends libsndfile1 && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends libsndfile1 ffmpeg && rm -rf /var/lib/apt/lists/*
 
 # Install required Python packages
 RUN pip install numpy scipy librosa future Pillow noisereduce
